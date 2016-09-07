@@ -18,7 +18,7 @@ $vendedor->listar();
 echo "Comisión: $".$comision->calcularComision($venta->getTotalVenta()).$comision->getTotalComision();
 echo "Sueldo: $";$vendedor->calcularSueldo($comision->getTotalComision());
 
-$vendedor2 = new Vendedor("1234", "Camilo Pardo");
+$vendedor2 = new Vendedor("1234", "Camilo Ruiz");
 $articulo3 = new Articulo("Celular Xperia", 900000, 2);
 $articulo4 = new Articulo("Celular Samsung S6", 1600000, 2);
 $venta1 = new Venta("2/9/2016");
