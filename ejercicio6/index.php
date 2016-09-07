@@ -1,0 +1,41 @@
+<?php
+require_once 'Vehiculo.php';
+require_once 'ContratoAlquiler.php';
+require_once 'Persona.php';
+
+$vehiculo1=new Vehiculo("AWX123",50,"Azul","Hyundai");
+$vehiculo2=new Vehiculo("BERX345",60,"Rojo","Chevrolet");
+$vehiculo3=new Vehiculo("CAR678",70,"Blanco","Audi");
+$vehiculo4=new Vehiculo("PER901",80,"Morado","BMW");
+$vehiculo5=new Vehiculo("HOR234",90,"Verde","Toyota");
+$vehiculo6=new Vehiculo("OMX567",100,"Amarillo","Nissan");
+$vehiculo7=new Vehiculo("TIR890",200,"Azul","Daewo");
+$vehiculo8=new Vehiculo("ASD123",300,"Rojo","Ford");
+$vehiculo9=new Vehiculo("GER456",20,"Verde","Mitsubichi");
+$vehiculo10=new Vehiculo("ADS789",30,"Blanco","Mazda");
+$vehiculo1->registrarVehiculo($vehiculo1);
+$vehiculo1->registrarVehiculo($vehiculo2);
+$vehiculo1->registrarVehiculo($vehiculo3);
+$vehiculo1->registrarVehiculo($vehiculo4);
+$vehiculo1->registrarVehiculo($vehiculo5);
+$vehiculo1->registrarVehiculo($vehiculo6);
+$vehiculo1->registrarVehiculo($vehiculo7);
+$vehiculo1->registrarVehiculo($vehiculo8);
+$vehiculo1->registrarVehiculo($vehiculo9);
+$vehiculo1->registrarVehiculo($vehiculo10);
+echo "Mostrar Vehiculos"."<br/><br/>";
+$vehiculo1->mostrarVehiculo();
+echo "<br/>";
+echo "Mostrar Vehiculos Por Km"."<br/><br/>";
+$vehiculo1->mostrarVehiculoPorKm();
+$persona=new Persona("1020456789","Juan Diaz","3124567890");
+$persona->registrarPersona($persona);
+$persona=new Persona("1020456789","Juan Diaz","3124567890");
+$persona->registrarPersona($persona);
+$alquiler=new ContratoAlquiler();
+$alquiler->registrarAlquiler("1/9/2016",$vehiculo1,$persona);
+$alquiler->registrarAlquiler("2/9/2016",$vehiculo2,$persona);
+echo "<br/>";
+echo "Mostrar Vehiculos Alquilados"."<br/><br/>";
+$alquiler->mostrarAlquiler();
+?>
